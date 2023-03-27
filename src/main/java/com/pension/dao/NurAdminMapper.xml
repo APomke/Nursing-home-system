@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pension.dao.NurAdminMapper">
+    <select id="getNurAdminById" resultType="com.pension.pojo.NurAdmin">
+        select * from nuradmin where id = #{id}
+    </select>
+    <select id="getNurAdminByAdldAndAdpwd" resultType="com.pension.pojo.NurAdmin">
+        select * from nuradmin where adId=#{Username} and adPwd=#{Password}
+    </select>
+</mapper>

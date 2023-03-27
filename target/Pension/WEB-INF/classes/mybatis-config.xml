@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--开启驼峰下划线转换-->
+<!--    <settings>-->
+<!--        <setting name="mapUnderscoreToCamelCase" value="true"/>-->
+<!--    </settings>-->
+
+    <typeAliases>
+        <package name="com.pension.pojo"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper class="com.pension.dao.NurAdminMapper"/>
+    </mappers>
+</configuration>
