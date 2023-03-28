@@ -4,6 +4,7 @@ import com.pension.dao.NurAdminMapper;
 import com.pension.pojo.NurAdmin;
 
 public class NurAdminServiceImpl implements NurAdminService{
+
     private NurAdminMapper nurAdminMapper;
 
     @Override

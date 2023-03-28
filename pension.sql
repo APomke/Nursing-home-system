@@ -186,3 +186,25 @@ CREATE TABLE record (
   CONSTRAINT FK_croomId FOREIGN KEY (roomId) REFERENCES room(roomId),
   CONSTRAINT FK_costStateId FOREIGN KEY (costStateId) REFERENCES costState(costStateId)
 );
+
+
+-- 增加管理员
+insert into nuradmin values (1,"311252","123456","管理员","1433223")
+
+-- 增加房间类型
+    insert into type values (1,"普通养老房");
+
+-- 增加房间状态
+insert into roomstate values (1,"正常");
+
+-- 增加房间
+insert into room values (1,"南","1","500",1,1);
+
+-- 添加住院状态
+insert into nurstate values (1,"正常");
+
+-- 添加护工
+insert into nuremp values ("10000","123456","1号护工","114514");
+
+-- 添加老人
+insert into nuruser values ("101","123456","1号老人",98,"190","160","311252","3306","aaa","123456","无",1,1,"10000");

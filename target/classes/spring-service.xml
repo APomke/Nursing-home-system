@@ -11,6 +11,9 @@
     <bean id="NurAdminServiceImpl" class="com.pension.service.NurAdminServiceImpl">
         <property name="nurAdminMapper" ref="nurAdminMapper"/>
     </bean>
+    <bean id="NurUserServiceImpl" class="com.pension.service.NurUserServiceImpl">
+        <property name="nurUserMapper" ref="nurUserMapper"/>
+    </bean>
 
     <!--声明式事务配置-->
     <bean id="TransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

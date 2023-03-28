@@ -83,55 +83,6 @@
 								<dd>
 									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
 											 src="../../admin/images/avatar.jpg"></a></div>
-									<div>
-										<p>七彩枫叶 在 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">Pear Admin 专区</a> 回答问题</p>
-										<span>几秒前</span>
-									</div>
-								</dd>
-								<dd>
-									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
-											 src="../../admin/images/avatar.jpg"></a></div>
-									<div>
-										<p>简 在 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">Pear Admin 专区</a> 进行了 <a
-											 class="pear-text" lay-href="http://fly.layui.com/vipclub/list/layuiadmin/column/quiz/">提问</a></p>
-										<span>2天前</span>
-									</div>
-								</dd>
-								<dd>
-									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
-											 src="../../admin/images/avatar.jpg"></a></div>
-									<div>
-										<p>恒宇少年 将 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">Pear Admin </a> 更新至 2.3.0
-											版本</p>
-										<span>7天前</span>
-									</div>
-								</dd>
-								<dd>
-									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
-											 src="../../admin/images/avatar.jpg"></a></div>
-									<div>
-										<p>如花 在 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">Pear Admin 社区</a> 发布了 <a
-											 class="pear-text" lay-href="http://fly.layui.com/column/suggest/">建议</a></p>
-										<span>7天前</span>
-									</div>
-								</dd>
-								<dd>
-									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
-											 src="../../admin/images/avatar.jpg"></a></div>
-									<div>
-										<p>就眠仪式 在 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">Pear Admin 社区</a> 发布了 <a
-											 class="pear-text" lay-href="http://fly.layui.com/column/suggest/">建议</a></p>
-										<span>8天前</span>
-									</div>
-								</dd>
-								<dd>
-									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
-											 src="../../admin/images/avatar.jpg"></a></div>
-									<div>
-										<p>贤心 在 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">Pear Admin 专区</a> 进行了 <a
-											 class="pear-text" lay-href="http://fly.layui.com/vipclub/list/layuiadmin/column/quiz/">提问</a></p>
-										<span>8天前</span>
-									</div>
 								</dd>
 							</dl>
 						</div>
@@ -182,14 +133,14 @@
 
 				count.up("value2", {
 					time: 4000,
-					num: 236.30,
+					num: 1,
 					bit: 2,
 					regulator: 50
 				})
 
 				count.up("value3", {
 					time: 4000,
-					num: 634.43,
+					num: 1,
 					bit: 2,
 					regulator: 50
 				})
@@ -197,7 +148,7 @@
 				count.up("value4", {
 					time: 4000,
 					bit: 2,
-					num: 373.23,
+					num: 700,
 					regulator: 50
 				})
 
