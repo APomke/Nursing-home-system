@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pension.dao.RoomMapper">
+    <select id="getAllRoom" resultType="com.pension.pojo.Room">
+        select * from room
+    </select>
+    <select id="getRoomCount" resultType="com.pension.pojo.Count">
+        select count(*) as count from room
+    </select>
+    <select id="getRoomById" resultType="com.pension.pojo.Room">
+        select * from room where roomId=#{roomId}
+    </select>
+
+    <insert id="addRoom" parameterType="com.pension.pojo.Room">
+        insert into room (roomId, orientation, floor, price, typeId, roomStateId)
+        values (#{roomId},#{orientation},#{floor},#{price},#{typeId},#{roomStateId})
+    </insert>
+
+    <delete id="deleteRoom">
+        delete from room where roomId=#{roomId}
+    </delete>
+</mapper>

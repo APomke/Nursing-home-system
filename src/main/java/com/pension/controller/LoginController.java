@@ -1,7 +1,9 @@
 package com.pension.controller;
 
+import com.pension.pojo.Count;
 import com.pension.pojo.NurAdmin;
 import com.pension.service.NurAdminService;
+import com.pension.service.NurUserService;
 import com.pension.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,6 +18,10 @@ public class LoginController {
     @Autowired
     @Qualifier("NurAdminServiceImpl")
     private NurAdminService nurAdminService;
+
+    @Autowired
+    @Qualifier("NurUserServiceImpl")
+    private NurUserService nurUserService;
 
     @PostMapping("/login")
     public String login(HttpServletRequest request,Model model){

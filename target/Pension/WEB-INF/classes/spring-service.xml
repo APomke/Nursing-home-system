@@ -14,6 +14,12 @@
     <bean id="NurUserServiceImpl" class="com.pension.service.NurUserServiceImpl">
         <property name="nurUserMapper" ref="nurUserMapper"/>
     </bean>
+    <bean id="NurEmpServiceImpl" class="com.pension.service.NurEmpServiceImpl">
+        <property name="nurEmpMapper" ref="nurEmpMapper"/>
+    </bean>
+    <bean id="RoomServiceImpl" class="com.pension.service.RoomServiceImpl">
+        <property name="roomMapper" ref="roomMapper"/>
+    </bean>
 
     <!--声明式事务配置-->
     <bean id="TransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

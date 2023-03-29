@@ -10,7 +10,7 @@
 			"icon": "layui-icon layui-icon-console",
 			"type": 1,
 			"openType": "_iframe",
-			"href": "view/console/console1.html"
+			"href": "user/index"
 		}]
 	}, {
 		"id": "system",
@@ -28,68 +28,31 @@
 			},
 			{
 				"id": 602,
-				"title": "角色管理",
+				"title": "护工管理",
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/role.html"
+				"href": "emp/emplist"
 			},
 
 			{
 				"id": 603,
-				"title": "权限管理",
+				"title": "房间管理",
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/power.html"
+				"href": "room/roomlist"
 			},
 
 			{
 				"id": 604,
-				"title": "部门管理",
+				"title": "缴费管理",
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
 				"href": "view/system/deptment.html"
-			},
-			{
-				"id": 605,
-				"title": "行为日志",
-				"icon": "layui-icon layui-icon-face-cry",
-				"type": 1,
-				"openType": "_iframe",
-				"href": "view/system/log.html"
-			}, {
-				"id": 606,
-				"title": "数据字典",
-				"icon": "layui-icon layui-icon-face-cry",
-				"type": 1,
-				"openType": "_iframe",
-				"href": "view/system/dict.html"
 			}
 
 		]
-	},
-	{
-		"id": "common",
-		"title": "常用页面",
-		"icon": "layui-icon layui-icon-template-1",
-		"type": 0,
-		"href": "",
-		"children": [{
-			"id": 701,
-			"title": "登录页面",
-			"icon": "layui-icon layui-icon-face-smile",
-			"type": 1,
-			"openType": "_iframe",
-			"href": "login.html"
-		}, {
-			"id": 702,
-			"title": "空白页面",
-			"icon": "layui-icon layui-icon-face-smile",
-			"type": 1,
-			"openType": "_iframe",
-			"href": "view/system/space.html"
-		}]
 	}
 ]

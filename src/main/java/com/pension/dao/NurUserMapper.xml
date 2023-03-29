@@ -9,4 +9,17 @@
     <select id="getAllNurUser" resultType="com.pension.pojo.NurUser">
         select * from nuruser
     </select>
+    <select id="getAllUserConunt" resultType="com.pension.pojo.Count">
+        select count(*) as count from nuruser
+    </select>
+
+    <insert id="addUser" parameterType="com.pension.pojo.NurUser">
+        insert into nuruser (uuid, upwd, uname, uage, uheight, uweight, utel, ucard, contact, contactTel, history, roomId, nurStateId, empId)
+        values
+               (#{uuid},#{upwd},#{uname},#{uage},#{uheight},#{uweight},#{utel},#{ucard},#{contact},#{contactTel},#{history},#{roomId},#{nurStateId},#{empId})
+    </insert>
+
+    <delete id="deleteUser">
+        delete from nuruser where uuid=#{uuid}
+    </delete>
 </mapper>

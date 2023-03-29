@@ -14,26 +14,14 @@
 				<form class="layui-form" action="">
 					<div class="layui-form-item">
 						<div class="layui-form-item layui-inline">
-							<label class="layui-form-label">用户名</label>
+							<label class="layui-form-label">账号</label>
 							<div class="layui-input-inline">
-								<input type="text" name="realName" placeholder="" class="layui-input">
+								<input type="number" name="realName" placeholder="" class="layui-input">
 							</div>
 						</div>
 						<div class="layui-form-item layui-inline">
-							<label class="layui-form-label">性别</label>
-							<div class="layui-input-inline">
-								<input type="text" name="realName" placeholder="" class="layui-input">
-							</div>
-						</div>
-						<div class="layui-form-item layui-inline">
-							<label class="layui-form-label">邮箱</label>
-							<div class="layui-input-inline">
-								<input type="text" name="realName" placeholder="" class="layui-input">
-							</div>
-						</div>
-						<div class="layui-form-item layui-inline">
-							<button class="pear-btn pear-btn-md pear-btn-primary" lay-submit lay-filter="user-query">
-								<i class="layui-icon layui-icon-search"></i>
+							<button class="pear-btn pear-btn-md pear-btn-primary" onclick="queryUser($('input[name=realName]').val())">
+								<i class="layui-icon"></i>
 								查询
 							</button>
 							<button type="reset" class="pear-btn pear-btn-md">
@@ -79,6 +67,7 @@
 				</c:forEach>
 				</tbody>
 			</table>
+			${msg}
 		</div>
 
 
@@ -92,9 +81,19 @@
 
 			let MODULE_PATH = "operate/";
 
+			function queryUser(uuid){
+				//查询用户
+				console.log("查询用户:" + uuid)
+				// 跳转到指定链接
+				window.location.href = "${pageContext.request.contextPath}/user/queryUser?uuid=" + uuid;
+				return false;
+			}
+
 			function addUser() {
 				//添加用户
 				console.log("添加用户")
+				// 跳转到指定链接
+				window.location.href = "${pageContext.request.contextPath}/user/addUser";
 			}
 
 			function editUser(userId) {
@@ -110,27 +109,8 @@
 				}, function(index) {
 					layer.close(index);
 					let loading = layer.load();
-					$.ajax({
-						url: MODULE_PATH + "remove/" + userId,
-						dataType: 'json',
-						type: 'delete',
-						success: function(result) {
-							layer.close(loading);
-							if (result.success) {
-								layer.msg(result.msg, {
-									icon: 1,
-									time: 1000
-								}, function() {
-									obj.del();
-								});
-							} else {
-								layer.msg(result.msg, {
-									icon: 2,
-									time: 1000
-								});
-							}
-						}
-					})
+					// 跳转到指定链接
+					window.location.href = "${pageContext.request.contextPath}/user/delete?uuid=" + userId;
 				});
 			}
 		</script>

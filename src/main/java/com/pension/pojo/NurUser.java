@@ -17,9 +17,10 @@ public class NurUser {
     private String utel;//手机号
     private String ucard;//身份证
     private String contact;//联系人
-    private String contacTel;//联系人电话
+    private String contactTel;//联系人电话
     private String history;//病史
     private int roomId;//房间编号
-    private int unrStatId;//在院状态
+    private int nurStateId;//在院状态
     private String empId;//护工账号
+
 }
