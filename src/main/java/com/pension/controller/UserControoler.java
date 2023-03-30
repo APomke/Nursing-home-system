@@ -2,10 +2,9 @@ package com.pension.controller;
 
 import com.pension.pojo.Count;
 import com.pension.pojo.NurUser;
-import com.pension.service.NurEmpService;
-import com.pension.service.NurEmpServiceImpl;
-import com.pension.service.NurUserService;
-import com.pension.service.RoomService;
+import com.pension.pojo.Pay;
+import com.pension.pojo.Record;
+import com.pension.service.*;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.jws.WebParam;
 import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -32,6 +33,14 @@ public class UserControoler {
     @Autowired
     @Qualifier("RoomServiceImpl")
     private RoomService roomService;
+
+    @Autowired
+    @Qualifier("PayServiceImpl")
+    private PayService payService;
+
+    @Autowired
+    @Qualifier("RecordServiceImpl")
+    private RecordService recordService;
 
     @RequestMapping("/user/userlist")
     public String userlist(HttpServletRequest request, Model model){
@@ -68,6 +77,9 @@ public class UserControoler {
         Count roomCount = roomService.getRoomCount();
         int newRoomCount = roomCount.getCount();
         model.addAttribute("roomCount",newRoomCount);
+        List<Record> recordList = recordService.getAllRecord();
+        model.addAttribute("recordList",recordList);
+        System.out.println(recordList.toString());
         return "console1";
     }
 
@@ -95,6 +107,17 @@ public class UserControoler {
             );
             int s = nurUserService.addUser(nurUser);
             if (s == 1){
+                //添加缴费情况
+                Pay pay = new Pay(Integer.parseInt(uuid),0);
+                payService.addPay(pay);
+
+                //添加入住记录
+                Date date = new Date(); // 获取当前时间
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); // 创建一个日期格式化对象
+                String now = dateFormat.format(date); // 将日期对象转化为字符串
+                Record record = new Record(uuid,request.getParameter("uname"),now,request.getParameter("roomId"));
+                recordService.addRecord(record);
+
                 return "forward:/user/userlist";
             }else {
                 model.addAttribute("msg","用户添加失败");

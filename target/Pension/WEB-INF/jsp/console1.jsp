@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -80,10 +82,15 @@
 						<div class="layui-card-header">入住记录</div>
 						<div class="layui-card-body">
 							<dl class="layuiadmin-card-status">
+							<c:forEach var="record" items="${recordList }" varStatus="status">
 								<dd>
-									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;"
-											 src="../../admin/images/avatar.jpg"></a></div>
+									<div class="layui-status-img"><a href="javascript:;"><img style="width: 32px;height: 32px;border-radius: 50px;" src="${pageContext.request.contextPath}/admin/images/avatar.jpg"></a></div>
+									<div>
+										<p>${record.uname} 在 <a class="pear-text" lay-href="https://gitee.com/Jmysy/Pear-Admin-Layui">${record.startDate}</a> 入住了${record.roomId}号房</p>
+										<span>${record.startDate}</span>
+									</div>
 								</dd>
+							</c:forEach>
 							</dl>
 						</div>
 					</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pension.dao.PayMapper">
+    <insert id="addPay" parameterType="com.pension.pojo.Pay">
+        insert into pay (uuid, ispay) VALUES (#{uuid},#{ispay})
+    </insert>
+    <select id="getPayList" resultType="com.pension.pojo.Pay">
+        select * from pay
+    </select>
+
+    <update id="updatePay">
+        update pay set ispay=#{ispay} where uuid=#{uuid}
+    </update>
+</mapper>

@@ -57,16 +57,27 @@ CREATE TABLE nurState (
 );
 
 /*
-5.费用状态表  costState
-状态码 costStateId  主键  number
-状态名 costStateName     varchar（50）0待缴费、1已缴费
+5.费用表  cost用来记载养老院的各项费用
+住宿费 hotelCost int(20)
+护工费 empCost   int(20)
+餐饮费 foodCost  int(20)
+杂物费 sundriesCost  int(20)
 */
 
-CREATE TABLE costState (
-  costStateId int(11) NOT NULL,
-  costStateName varchar(50),
-  PRIMARY KEY (costStateId)
+CREATE TABLE cost (
+    hotelCost INT(20) NOT NULL,
+    empCost INT(20) NOT NULL,
+    foodCost INT(20) NOT NULL,
+    sundriesCost INT(20) NOT NULL
 );
+
+/*
+缴费表
+客户id
+是否缴费
+
+*/
+create table pay(uuid int(20),ispay int(20));
 
 /*
 6.房间状态表  roomState
@@ -166,27 +177,9 @@ CREATE TABLE healthfile (
 
 /*
 10.入住记录表  record
-记录编号 recordId  主键  number
-入住日期 startDate   varchar（20）
-到期日期 endDate    varchar（20）
-用户编号 uid  外键（用户信息表主键）	varchar（20）
-房间编号 roomId  外键（房间信息表主键）     number
-费用状态 costStateId 外键（费用状态表主键）   number
 */
 
-CREATE TABLE record (
-  recordId int(11) NOT NULL,
-  startDate varchar(20),
-  endDate varchar(20),
-  uid varchar(20),
-  roomId int(11),
-  costStateId int(11),
-  PRIMARY KEY (recordId),
-  CONSTRAINT FK_uid FOREIGN KEY (uid) REFERENCES nurUser(uuid),
-  CONSTRAINT FK_croomId FOREIGN KEY (roomId) REFERENCES room(roomId),
-  CONSTRAINT FK_costStateId FOREIGN KEY (costStateId) REFERENCES costState(costStateId)
-);
-
+create table record (uuid varchar(20),uname varchar(20),startDate varchar(50),roomId varchar(20));
 
 -- 增加管理员
 insert into nuradmin values (1,"311252","123456","管理员","1433223")
@@ -208,3 +201,12 @@ insert into nuremp values ("10000","123456","1号护工","114514");
 
 -- 添加老人
 insert into nuruser values ("101","123456","1号老人",98,"190","160","311252","3306","aaa","123456","无",1,1,"10000");
+
+-- 添加缴费情况
+insert into pay (uuid, ispay)
+values (101,0);
+
+-- 添加缴费服务价格
+insert into cost values (400,400,500,200);
+
+

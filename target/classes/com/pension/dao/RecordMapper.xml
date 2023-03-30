@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pension.dao.RecordMapper">
+    <insert id="addRecord" parameterType="com.pension.pojo.Record">
+        insert into record (uuid, uname,startDate,roomId) VALUES (#{uuid},#{uname},#{startDate},#{roomId})
+    </insert>
+    <select id="getAllRecord" resultType="com.pension.pojo.Record">
+        select * from record
+    </select>
+</mapper>

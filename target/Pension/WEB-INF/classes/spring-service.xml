@@ -20,6 +20,15 @@
     <bean id="RoomServiceImpl" class="com.pension.service.RoomServiceImpl">
         <property name="roomMapper" ref="roomMapper"/>
     </bean>
+    <bean id="CostServiceImpl" class="com.pension.service.CostServiceImpl">
+        <property name="costMapper" ref="costMapper"/>
+    </bean>
+    <bean id="PayServiceImpl" class="com.pension.service.PayServiceImpl">
+        <property name="payMapper" ref="payMapper"/>
+    </bean>
+    <bean id="RecordServiceImpl" class="com.pension.service.RecordServiceImpl">
+        <property name="recordMapper" ref="recordMapper"/>
+    </bean>
 
     <!--声明式事务配置-->
     <bean id="TransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

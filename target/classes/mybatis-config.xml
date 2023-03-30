@@ -15,5 +15,10 @@
     <mappers>
         <mapper class="com.pension.dao.NurAdminMapper"/>
         <mapper class="com.pension.dao.NurUserMapper"/>
+        <mapper class="com.pension.dao.NurEmpMapper"/>
+        <mapper class="com.pension.dao.RoomMapper"/>
+        <mapper class="com.pension.dao.CostMapper"/>
+        <mapper class="com.pension.dao.PayMapper"/>
+        <mapper class="com.pension.dao.RecordMapper"/>
     </mappers>
 </configuration>

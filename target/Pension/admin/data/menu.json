@@ -11,7 +11,15 @@
 			"type": 1,
 			"openType": "_iframe",
 			"href": "user/index"
-		}]
+		},
+			{
+				"id": 11,
+				"title": "查看缴费情况",
+				"icon": "layui-icon layui-icon-face-cry",
+				"type": 1,
+				"openType": "_iframe",
+				"href": "cost/status"
+			}]
 	}, {
 		"id": "system",
 		"title": "系统管理",
@@ -50,7 +58,7 @@
 				"icon": "layui-icon layui-icon-face-cry",
 				"type": 1,
 				"openType": "_iframe",
-				"href": "view/system/deptment.html"
+				"href": "cost/costlist"
 			}
 
 		]
