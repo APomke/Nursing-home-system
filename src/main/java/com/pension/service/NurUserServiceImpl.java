@@ -36,6 +36,11 @@ public class NurUserServiceImpl implements NurUserService{
         return nurUserMapper.deleteUser(uuid);
     }
 
+    @Override
+    public NurUser getUserByUuidAndPwd(String username, String password) {
+        return nurUserMapper.getUserByUuidAndPwd(username,password);
+    }
+
     public void setNurUserMapper(NurUserMapper nurUserMapper) {
         this.nurUserMapper = nurUserMapper;
     }

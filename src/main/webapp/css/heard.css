@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* 导航栏样式 */
+header {
+    background-color: #E8F2FE;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077FF;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0077FF;
+    transform: translateY(-2px);
+}
+
+/*#login-button {*/
+/*    background-color: #3498db;*/
+/*    color: #ffffff;*/
+/*    border: none;*/
+/*    border-radius: 3px;*/
+/*    padding: 10px 20px;*/
+/*    margin-left: auto;*/
+/*    margin-right: 20px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*#login-button:hover {*/
+/*    background-color: #2980b9;*/
+/*}*/
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #E8F2FE;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    nav button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 28px;
+        color: #0077FF;
+    }
+
+    nav button:hover {
+        transform: translateY(-2px);
+    }
+
+    nav.show ul {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -22,4 +22,7 @@
     <delete id="deleteUser">
         delete from nuruser where uuid=#{uuid}
     </delete>
+    <select id="getUserByUuidAndPwd" resultType="com.pension.pojo.NurUser">
+        select * from nuruser where uuid=#{Username} and upwd=#{Password}
+    </select>
 </mapper>

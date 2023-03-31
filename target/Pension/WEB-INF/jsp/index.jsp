@@ -117,7 +117,7 @@
     // 登出逻辑
     admin.logout(function(){
       popup.success("注销成功",function(){
-        location.href = "login.html";
+        location.href = "loginout";
       })
       // 注销逻辑 返回 true / false
       return true;

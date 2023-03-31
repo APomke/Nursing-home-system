@@ -20,8 +20,13 @@ public class PayServiceImpl implements PayService{
     }
 
     @Override
-    public int updatePay(int uuid) {
-        return payMapper.updatePay(uuid);
+    public int updatePay(Pay pay) {
+        return payMapper.updatePay(pay);
+    }
+
+    @Override
+    public Pay getPayById(String uuid) {
+        return payMapper.getPayById(uuid);
     }
 
     public void setPayMapper(PayMapper payMapper) {

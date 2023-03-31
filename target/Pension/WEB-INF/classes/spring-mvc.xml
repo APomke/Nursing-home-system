@@ -23,11 +23,11 @@
         <property name="suffix" value=".jsp" />
     </bean>
     <!--拦截器-->
-<!--    <mvc:interceptors>-->
-<!--        <mvc:interceptor>-->
-<!--            &lt;!&ndash;拦截所有请求&ndash;&gt;-->
-<!--            <mvc:mapping path="/user/**" />-->
-<!--            <bean class="com.wjx.config.UserIntercepetor"/>-->
-<!--        </mvc:interceptor>-->
-<!--    </mvc:interceptors>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--拦截所有请求-->
+            <mvc:mapping path="/user/**" />
+            <bean class="com.pension.config.UserIntercepetor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

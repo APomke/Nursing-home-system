@@ -10,7 +10,11 @@
         select * from pay
     </select>
 
-    <update id="updatePay">
+    <update id="updatePay" parameterType="com.pension.pojo.Pay">
         update pay set ispay=#{ispay} where uuid=#{uuid}
     </update>
+
+    <select id="getPayById" resultType="com.pension.pojo.Pay">
+        select * from pay where uuid=#{Uuid}
+    </select>
 </mapper>

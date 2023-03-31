@@ -3,6 +3,7 @@ package com.pension.service;
 import com.pension.dao.NurUserMapper;
 import com.pension.pojo.Count;
 import com.pension.pojo.NurUser;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface NurUserService {
     int addUser(NurUser nurUser);
     //删除用户
     int deleteUser(String uuid);
+    //通过账号密码获取用户
+    NurUser getUserByUuidAndPwd(String username, String password);
 }
